@@ -1,21 +1,15 @@
 # Roblox Service-Controller Framework Template
 
-โครงสร้างเริ่มต้นสำหรับโปรเจกต์ Roblox ที่ใช้รูปแบบ Service-Controller และ Fusion UI
+Base Template Roblox Service-Controller and Fusion UI
 
-## 📂 โครงสร้างโฟลเดอร์
+## Structure
 
-- **`src/ReplicatedStorage/Framework`**: หัวใจหลักของระบบ (Shared Bootstrapper)
-- **`src/ServerScriptService/Services`**: สำหรับใส่ Logic ฝั่ง Server (Singleton Services)
-- **`src/ReplicatedStorage/Client/Controllers`**: สำหรับใส่ Logic ฝั่ง Client
-- **`src/ReplicatedStorage/Client/Components`**: สำหรับเก็บ UI Components (Fusion)
+- **`src/ReplicatedStorage/Framework`**: Core System (Shared Bootstrapper)
+- **`src/ServerScriptService/Services`**: Server Logic (Singleton Services)
+- **`src/ReplicatedStorage/Client/Controllers`**: Client Logic
+- **`src/ReplicatedStorage/Client/Components`**: UI Components (Fusion)
 
-## 🚀 วิธีเริ่มต้นใช้งาน
-
-1. ติดตั้ง **Rojo** เพื่อ Sync โค้ดเข้า Roblox Studio
-2. Framework จะทำการโหลดทุกไฟล์ใน `Services` และ `Controllers` อัตโนมัติ
-3. ทุก Module จะต้องมีฟังก์ชัน `:new(framework)` และอาจมี `:Init()` กับ `:Start()`
-
-### ตัวอย่างการสร้าง Service ใหม่:
+### Example Create New Service:
 
 ```lua
 local MyService = {}
@@ -28,17 +22,17 @@ function MyService:new(framework)
 end
 
 function MyService:Init()
-    -- โหลดข้อมูลเบื้องต้น
+    -- Load Initial Data
 end
 
 function MyService:Start()
-    -- เริ่มการทำงานหลัก
+    -- Start Main Logic
 end
 
 return MyService
 ```
 
-## 🛠️ เครื่องมือที่แนะนำ
+## Tools
 
 - **Fusion**: สำหรับสร้าง UI แบบ Reactive
 - **ProfileService**: สำหรับจัดการ DataStore
